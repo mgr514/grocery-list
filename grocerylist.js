@@ -16,6 +16,14 @@ function addItem(){
     var h2 = document.createElement("h2");
     h2.innerHTML = "- " + userInput.value;
 
+    var deleteButton = document.createElement("button")
+    deleteButton.innerHTML = "Delete";
+
+    deleteButton.addEventListener("click", function(){
+        h2.remove();
+    });
+    h2.appendChild(deleteButton);
+    
     h2.addEventListener("click",function(){
         h2.style.textDecoration = "line-through";
     })
