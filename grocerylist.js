@@ -20,9 +20,13 @@ function addItem(){
     editButton.innerHTML = "Edit";
 
     editButton.addEventListener("click", function(){
-        h2. 
+        const html_string = editButton.parentElement.innerHTML;
+        const grocery_string = html_string.slice(2, html_string.indexOf('<'))
+        userInput.value = grocery_string;
+        userInput.focus()
+
+        h2.remove()
     });
-     //no idea what to do next, I broke the code. Maybe another userInput?
 
     var deleteButton = document.createElement("button")
     deleteButton.innerHTML = "Delete";
